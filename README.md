@@ -8,7 +8,7 @@ This Python project allows you to import **ADIF** (Amateur Data Interchange Form
 
 - **Parses ADIF log files** and converts them into structured data.
 - **Supports multiple databases**: MariaDB, PostgreSQL, Oracle, MSSQL.
-- **Database configuration is externalized** in a `config.yaml` file.
+- **Database configuration is externalised** in a `config.yaml` file.
 - **Flexible and extensible**: easily add new database backends by modifying the factory.
 
 ---
@@ -114,25 +114,6 @@ To add a new database backend:
 1. Create a new class that implements the `DatabaseInterface` in the `db/` folder.
 2. Update `DatabaseFactory` to include your new class.
 3. Ensure that `config.yaml` is updated with the correct database configuration.
-
----
-
-## Dependencies
-
-The following Python packages are required to run the project:
-
-- `pyyaml` - For reading the `config.yaml` file.
-- `adif` - For parsing ADIF files.
-- `pymysql` - MariaDB driver.
-- `psycopg2` - PostgreSQL driver.
-- `cx_Oracle` - Oracle driver.
-- `pyodbc` - MSSQL driver.
-
-Install the dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
