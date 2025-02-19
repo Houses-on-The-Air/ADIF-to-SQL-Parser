@@ -1,0 +1,6 @@
+pyadif
+PyYAML
+pymysql
+oracledb
+psycopg2
+pyodbc
