@@ -1,4 +1,4 @@
-pyadif
+PyADIF
 PyYAML
 pymysql
 oracledb
