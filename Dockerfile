@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.13
 
 # Create a user and switch to it
 RUN useradd -m hota
