@@ -1,6 +1,5 @@
-PyADIF
 PyYAML
 pymysql
-oracledb
-psycopg2
+psycopg2-binary
+cx_Oracle
 pyodbc

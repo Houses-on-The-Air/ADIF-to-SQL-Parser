@@ -42,6 +42,7 @@ CREATE TABLE qsos (
     qsl_method ENUM('None', 'Paper', 'LoTW', 'eQSL') DEFAULT 'None',
     grid_square VARCHAR(10),
     country VARCHAR(100),
+    address VARCHAR(255)
     comment TEXT,
     FOREIGN KEY (station_id) REFERENCES stations(id) ON DELETE CASCADE,
     FOREIGN KEY (operator_id) REFERENCES operators(id) ON DELETE CASCADE

@@ -1,6 +1,6 @@
 import sys
-from parsers.adif_parser import ADIFParser
-from db_factory import DatabaseFactory
+from parser.adif_parser import ADIFParser
+from database.db_factory import DatabaseFactory
 
 def main():
     """
