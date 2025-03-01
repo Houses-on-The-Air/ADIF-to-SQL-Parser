@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  adif-importer-cronjob:
+  - apiVersion: v2
+    created: "2025-03-01T21:55:27.123459816Z"
+    description: A Helm chart for deploying the ADIF Importer Cronjob
+    digest: 5ba2770e9590d5d91f8265f571e61c9401ca72629139d0659fa2bbaffdc8f8e0
+    name: adif-importer-cronjob
+    urls:
+    - https://github.com/Houses-on-The-Air/ADIF-to-SQL-Parser/releases/download/adif-importer-cronjob-0.1.0/adif-importer-cronjob-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-01T21:55:27.123481046Z"
