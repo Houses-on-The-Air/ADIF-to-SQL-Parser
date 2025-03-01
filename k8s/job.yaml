@@ -1,0 +1,41 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: adif-importer-cronjob
+  namespace: custom-namespace
+spec:
+  schedule: 0 0 * * *
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: adif-importer-cronjob-container
+              image: ghcr.io/houses-on-the-air/ADIF-to-SQL-Parser:latest
+              resources:
+                requests:
+                  memory: 128Mi
+                  cpu: 250m
+                limits:
+                  memory: 256Mi
+                  cpu: 500m
+              securityContext:
+                allowPrivilegeEscalation: false
+                readOnlyRootFilesystem: true
+                runAsUser: 1000
+                capabilities:
+                  drop:
+                    - ALL
+              volumeMounts:
+                - mountPath: /mnt/azure
+                  name: azure-storage
+          restartPolicy: OnFailure
+          securityContext:
+            seccompProfile:
+              type: RuntimeDefault
+          serviceAccountName: default
+          automountServiceAccountToken: false
+          volumes:
+            - name: azure-storage
+              persistentVolumeClaim:
+                claimName: azure-pvc
