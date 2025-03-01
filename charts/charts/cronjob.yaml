@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: adif-importer-cronjob
-  namespace: custom-namespace
+  namespace: adif-importer
 spec:
   schedule: 0 0 * * *
   jobTemplate:
@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
             - name: adif-importer-cronjob-container
-              image: ghcr.io/houses-on-the-air/ADIF-to-SQL-Parser:latest
+              image: ghcr.io/houses-on-the-air/adif-to-sql-parser:latest
               resources:
                 requests:
                   memory: 128Mi
